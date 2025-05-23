@@ -15,7 +15,7 @@ public class Perez_Jiny_Exam1 {
 
         int opcionMenu = 0;
         while (opcionMenu != 5) {
-            System.out.println("--------------------------------------------");
+            System.out.println("\n--------------------------------------------");
             System.out.println("                    MENU                    ");
             System.out.println("--------------------------------------------");
             System.out.println("[1] Piramide");
@@ -23,7 +23,7 @@ public class Perez_Jiny_Exam1 {
             System.out.println("[3] Piedra, papel o tijera");
             System.out.println("[4] Adivinar");
             System.out.println("[5] Salir del Sistema");
-            System.out.println("--------------------------------------------\n");
+            System.out.println("--------------------------------------------");
             System.out.print("Ingrese una opcion:");
             opcionMenu = lea.nextInt();
 
@@ -35,7 +35,7 @@ public class Perez_Jiny_Exam1 {
                      fila = 0;
                     ;
 
-                    System.out.print("Ingrese la cantidad de fila de la piramide de numeros impares:");
+                    System.out.print("\nIngrese la cantidad de fila de la piramide de numeros impares:");
                     fila = lea.nextInt();
 
                     for (int i = 1; i <= fila; i++) {
@@ -56,7 +56,7 @@ public class Perez_Jiny_Exam1 {
                      cifrado = "",
                      descifrado = "";
 
-                    System.out.print("Ingrese un mesaje: ");
+                    System.out.print("\nIngrese un mesaje: ");
                     texto = lea.next();
 
                     for (int i = 0; i < texto.length(); i++) {
@@ -147,8 +147,9 @@ public class Perez_Jiny_Exam1 {
                      intentos = 0;
                     boolean acerto = false;
 
+                    System.out.println("\nAdivina el numero del 1 al 100.");
+                    
                     while (intentos < 10 && !acerto) {
-                        System.out.println("Adivina el numero del 1 al 100.");
                         System.out.print("Introducir un numero:");
                         numUsuario = lea.nextInt();
                         intentos++;
