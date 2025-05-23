@@ -28,7 +28,10 @@ public class Perez_Jiny_Exam1 {
         switch (opcionMenu) {
             case 1:
 
-                int numeroImpar = 1, sumNum = 0, fila = 0;;
+                int numeroImpar = 1,
+                 sumNum = 0,
+                 fila = 0;
+                ;
 
                 System.out.print("Ingrese la cantidad de fila de la piramide de numeros impares:");
                 fila = lea.nextInt();
@@ -40,19 +43,53 @@ public class Perez_Jiny_Exam1 {
                         sumNum += numeroImpar;
                         numeroImpar += 2;
                     }
-                    System.out.println(" = "+sumNum);
-                    sumNum=0;
+                    System.out.println(" = " + sumNum);
+                    sumNum = 0;
                 }
-            case 2:
-                
-                String texto="";
+                break;
                         
-                System.out.print("Ingrese un texto: ");
+            case 2:
+
+                String texto = "", cifrado = "", descifrado="";
+
+                System.out.print("Ingrese un mesaje: ");
                 texto = lea.next();
-                
-                for (int i=0; i<texto.length(); i++){
+
+                for (int i = 0; i < texto.length(); i++) {
                     char posicionLetra = texto.charAt(i);
+
+                    if (Character.isLowerCase(posicionLetra)) {
+                        char letraInvertida = (char) ('z' - (posicionLetra - 'a'));
+                        cifrado += letraInvertida;
+                    } else if (Character.isUpperCase(posicionLetra)) {
+                        char letraInvertida = (char) ('z' - (posicionLetra - 'a'));
+                        cifrado += letraInvertida;
+                    } else {
+                        cifrado += posicionLetra;
+                    }
                 }
+    
+                System.out.println("Mensaje cifrado:"+cifrado);
+                
+                 for (int i = 0; i < cifrado.length(); i++) {
+                    char posicionLetra = cifrado.charAt(i);
+
+                    if (Character.isLowerCase(posicionLetra)) {
+                        char letraInvertida = (char) ('z' - (posicionLetra - 'a'));
+                         descifrado += letraInvertida;
+                    } else if (Character.isUpperCase(posicionLetra)) {
+                        char letraInvertida = (char) ('z' - (posicionLetra - 'a'));
+                        descifrado += letraInvertida;
+                    } else {
+                         descifrado += posicionLetra;
+                    }
+                }
+                 
+                System.out.println("Mensaje descifrado:"+descifrado); 
+                break;
+            case 3:
+                System.out.println("Bienvenido al juego Papel, Piedra y Tijera.");
+                
 
         }
 
